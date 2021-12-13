@@ -15,6 +15,12 @@ using namespace std;
 
 class Organism;
 
+/**
+ * A city contains a 2-dimensional array of pointers to organisms. A city attempts
+ * to allow all entities to act. The action for each organism are entirely up to that
+ * organism alone. A city has been impacted by an extinction level event if zero humans
+ * or zero zombies exist.
+ */
 class City {
 
 private:
@@ -64,7 +70,7 @@ public:
 
     /**
      * The default destructor for the city which should deallocate all associated
-     * organisms.
+     * organisms, if necessary.
      */
     ~City();
 
@@ -116,9 +122,28 @@ public:
     vector<Position> adjacent(Position position, const vector<DirectionOffset> &directions,
                               const set<char> &identifiers);
 
+    /**
+     * Attempts to find an open tile adjacent to the position based on what directions are possible.
+     *
+     * @param position the position we're finding an adjacent tile to.
+     * @param directions the potential directions.
+     * @param identifiers the limited identifiers that we filter potential positions by.
+     * @return a random position that fits the criteria.
+     */
     Position randomAdjacent(Position position, const vector<DirectionOffset> &directions,
                               const set<char> &identifiers);
 
+    /**
+     * Attempts to find a position adjacent to the given position if it matches the identifier
+     * that has been prioritized. If it cannot, it will find another other position within
+     * the given list of identifier.
+     *
+     * @param position the position we're searching around.
+     * @param directions the directions we can search for.
+     * @param identifiers the identifiers we can search for.
+     * @param prioritizedIdentifier the single prioritized identifier.
+     * @return a random position that fits the criteria.
+     */
     Position randomAdjacentWithPriority(Position position, const vector<DirectionOffset> &directions,
                              const set<char> &identifiers, char prioritizedIdentifier);
 
