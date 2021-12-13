@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/Business/Documents/workspace/Assignment_4_w0270109/City.cpp
+City.h
+/Users/Business/Documents/workspace/Assignment_4_w0270109/City.h
+iostream
+-
+Organism.h
+/Users/Business/Documents/workspace/Assignment_4_w0270109/Organism.h
+Space.h
+/Users/Business/Documents/workspace/Assignment_4_w0270109/Space.h
+
+/Users/Business/Documents/workspace/Assignment_4_w0270109/City.h
+vector
+-
+
+/Users/Business/Documents/workspace/Assignment_4_w0270109/Human.h
+Organism.h
+/Users/Business/Documents/workspace/Assignment_4_w0270109/Organism.h
+City.h
+/Users/Business/Documents/workspace/Assignment_4_w0270109/City.h
+
+/Users/Business/Documents/workspace/Assignment_4_w0270109/Organism.h
+City.h
+/Users/Business/Documents/workspace/Assignment_4_w0270109/City.h
+
+/Users/Business/Documents/workspace/Assignment_4_w0270109/Space.h
+Organism.h
+/Users/Business/Documents/workspace/Assignment_4_w0270109/Organism.h
+
+/Users/Business/Documents/workspace/Assignment_4_w0270109/main.cpp
+iostream
+-
+City.h
+/Users/Business/Documents/workspace/Assignment_4_w0270109/City.h
+Human.h
+/Users/Business/Documents/workspace/Assignment_4_w0270109/Human.h
+
