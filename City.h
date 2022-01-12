@@ -45,7 +45,7 @@ private:
      * A vector that contains a vector of organisms, such that we have a matrix or grid
      * of organisms.
      */
-    Organism *organisms[GameSpecification::TILES][GameSpecification::TILES];
+    vector<vector<Organism*>> organisms = vector<vector<Organism*>>(GameSpecification::TILES);
 
     /**
      * The total count of humans

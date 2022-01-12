@@ -71,6 +71,11 @@ public:
      */
     virtual void setPosition(Position position);
 
+    /**
+     * Sets the state of whether the organism is actable to true or false.
+     *
+     * @param actable if the organism can act.
+     */
     void setActable(bool actable);
 
     /**
@@ -82,8 +87,18 @@ public:
         return moved;
     }
 
+    /**
+     * Determines if this organism is able to act.
+     *
+     * @return true if they can act.
+     */
     bool isActable() const;
 
+    /**
+     * Retrieves the position of the organism.
+     *
+     * @return the position.
+     */
     const Position &getPosition() const;
 
 };

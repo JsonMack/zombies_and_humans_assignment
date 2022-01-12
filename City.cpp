@@ -13,6 +13,8 @@ using namespace std;
 
 City::City(int tiles): tiles(tiles) {
     for (int y = 0; y < tiles; y++) {
+        organisms[y] = vector<Organism*>(tiles);
+
         for (int x = 0; x < tiles; x++) {
             organisms[y][x] = new Space(Position(x, y), this);
         }
